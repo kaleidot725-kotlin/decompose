@@ -3,7 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "0.3.1"
+    id("org.jetbrains.compose") version "0.4.0-build177"
 }
 
 group = "me.katz"
@@ -20,6 +20,8 @@ kotlin {
             dependencies {
                 implementation(project(":common"))
                 implementation(compose.desktop.currentOs)
+                implementation("com.arkivanov.decompose:decompose:0.2.3")
+                implementation("com.arkivanov.decompose:extensions-compose-jetbrains:0.2.3")
             }
         }
         val jvmTest by getting
